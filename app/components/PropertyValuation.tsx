@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import React, { useState } from "react"
-import { formatNumber, formatNumberWithCommas } from "../util"
+import { formatNumberWithCommas } from "../util"
 
 function PropertyValuation() {
   const [purchasePrice, setPurchasePrice] = useState<number>(0)
