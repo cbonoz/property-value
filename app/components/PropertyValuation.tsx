@@ -229,7 +229,7 @@ function PropertyValuation() {
           </div>
           <div className="mt-4">
             <div className="text-sm font-medium text-gray-700 font-bold">
-              Average Valuation: {formatNumberWithCommas(valuationAvg)}
+              Average Valuation: ${formatNumberWithCommas(valuationAvg)}
             </div>
           </div>
         </div>
