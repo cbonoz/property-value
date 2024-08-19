@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import React, { useState } from "react"
+import { formatNumber, formatNumberWithCommas } from "../util"
 
 function PropertyValuation() {
   const [purchasePrice, setPurchasePrice] = useState<number>(0)
@@ -129,7 +130,7 @@ function PropertyValuation() {
           </div>
           <div className="mt-4">
             <p className="text-sm font-medium text-gray-700">
-              Price per Door value: ${pricePerDoorValue.toFixed(2)}
+              Price per Door value: ${formatNumberWithCommas(pricePerDoorValue)}
             </p>
           </div>
         </div>
@@ -165,7 +166,7 @@ function PropertyValuation() {
           </div>
           <div className="mt-4">
             <p className="text-sm font-medium text-gray-700">
-              GRM value: ${grossRentMultiplierValue.toFixed(2)}
+              GRM value: ${formatNumberWithCommas(grossRentMultiplierValue)}
             </p>
           </div>
         </div>
@@ -203,7 +204,8 @@ function PropertyValuation() {
 
           <div className="mt-4">
             <p className="text-sm font-medium text-gray-700">
-              Cap rate value: ${capRateQuickValuationValue.toFixed(2)}
+              Cap rate value: $
+              {formatNumberWithCommas(capRateQuickValuationValue)}
             </p>
           </div>
         </div>
@@ -214,20 +216,20 @@ function PropertyValuation() {
           <div className="mt-4">
             <p className="text-sm font-medium text-gray-700">
               Price per Door value:
-              <br />${pricePerDoorValue.toFixed(2)}
+              <br />${formatNumberWithCommas(pricePerDoorValue)}
             </p>
             <p className="text-sm font-medium text-gray-700">
               Gross Rent Multiplier value:
-              <br />${grossRentMultiplierValue.toFixed(2)}
+              <br />${formatNumberWithCommas(grossRentMultiplierValue)}
             </p>
             <p className="text-sm font-medium text-gray-700">
               Comparable Cap Rate value:
-              <br />${capRateQuickValuationValue.toFixed(2)}
+              <br />${formatNumberWithCommas(capRateQuickValuationValue)}
             </p>
           </div>
           <div className="mt-4">
             <div className="text-sm font-medium text-gray-700 font-bold">
-              Average Valuation: ${valuationAvg.toFixed(2)}
+              Average Valuation: {formatNumberWithCommas(valuationAvg)}
             </div>
           </div>
         </div>
@@ -238,13 +240,13 @@ function PropertyValuation() {
           </h2>
           <div className="mt-4">
             <p className="text-sm font-medium text-gray-700">
-              Purchase Price: ${purchasePrice}
+              Purchase Price: ${formatNumberWithCommas(purchasePrice)}
             </p>
             <p className="text-sm font-medium text-gray-700">
-              Valuation Average: ${valuationAvg.toFixed(2)}
+              Valuation Average: ${formatNumberWithCommas(valuationAvg)}
             </p>
             <p className="text-sm font-medium text-gray-700">
-              Difference: ${difference.toFixed(2)}
+              Difference: ${formatNumberWithCommas(difference)}
             </p>
 
             <hr className="my-2" />
